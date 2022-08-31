@@ -1,0 +1,22 @@
+<main class="form-signin">
+  <h1 class="h3 mb-3 fw-normal">{{title | uppercase}}</h1>
+
+  <div class="form-floating">
+    <input type="text" class="form-control" id="floatingInput" placeholder="edad uno" [(ngModel)]="edadUno">
+    <label for="floatingInput">Edad 1</label>
+  </div>
+  <div class="form-floating">
+    <input type="text" class="form-control" id="floatingPassword" placeholder="edad dos" [(ngModel)]="edadDos">
+    <label for="floatingPassword">Edad 2</label>
+  </div>
+
+  <!-- Cualquier boton dentro del form recarga la pagina -->
+  <button class="w-100 btn btn-lg btn-primary" (click)="sumar()" (click)="promediar()">Calcular</button>
+  <br>
+  <button class="w-100 btn btn-lg btn-primary" (click)="limpiar()">Limpiar</button>
+  <h3> La Suma es: {{suma}}</h3>
+  <h3> El Promedio es: {{promedio}}</h3>
+</main>
+
+
+<router-outlet></router-outlet>
